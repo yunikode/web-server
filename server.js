@@ -14,7 +14,6 @@ const middleware = {
 }
 
 app.use(middleware.logger)
-// app.use(middleware.requireAuthentication)
 
 app.get('/about', middleware.requireAuthentication ,(req, res) => {
   res.send('About Us')
